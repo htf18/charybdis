@@ -2196,7 +2196,7 @@ conf_set_opm_timeout(void *data)
 {
 	int timeout = *((int *)data);
 
-	if(timeout <= 0 || timeout > 60)
+	if(timeout <= 0 || timeout > 600)
 	{
 		conf_report_error("opm::timeout value %d is bogus, ignoring", timeout);
 		return;
@@ -2316,7 +2316,6 @@ static void
 conf_set_opm_listen_port(void *data)
 {
 	conf_set_opm_listen_port_both(data, true);
-	conf_set_opm_listen_port_both(data, false);
 }
 
 static void
