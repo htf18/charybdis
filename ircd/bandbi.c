@@ -417,9 +417,12 @@ bandb_parse(rb_helper *helper)
 		case 'D':
 		case 'X':
 		case 'R':
+		case 'Z':
 			bandb_handle_ban(parv, parc);
 			break;
 
+		case 'Z':
+			bandb_handle_zip(parv, parc);
 		case 'C':
 			bandb_handle_clear();
 			break;
