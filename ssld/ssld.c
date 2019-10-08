@@ -1032,11 +1032,6 @@ mod_process_cmd_recv(mod_ctl_t * ctl)
 				ssl_new_keys(ctl, ctl_buf);
 				break;
 			}
-		case 'S':
-			{
-				process_stats(ctl, ctl_buf);
-				break;
-			}
 
 #ifdef HAVE_LIBZ
 		case 'Z':
