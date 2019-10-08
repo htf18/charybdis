@@ -50,7 +50,7 @@ static int eb_extended(const char *data, struct Client *client_p,
 	if (ret == EXTBAN_NOMATCH && IsDynSpoof(client_p))
 	{
 		snprintf(buf, BUFSIZE, "%s!%s@%s#%s",
-			client_p->name, client_p->username, client_p->orighost, client_p->info);
+			client_p->name, client_p->username, client_p->host, client_p->info);
 
 		ret = match(data, buf) ? EXTBAN_MATCH : EXTBAN_NOMATCH;
 	}
